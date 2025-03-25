@@ -2,7 +2,7 @@ import NavbarListElement from "./NavbarListElement";
 
 const Navbar = () => {
   return (
-    <div className="p-3 pr-30 flex justify-between items-center">
+    <div className="p-5 pr-30 flex justify-between items-center">
       <h1 className="font-bold text-5xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
         PosterVoteS.
       </h1>
