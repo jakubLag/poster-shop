@@ -1,4 +1,4 @@
-import WallCard from "@/components/wall/WallCard";
+import WallCard from "@/components/wall/PosterCard";
 
 export const Data = [
   {
@@ -17,7 +17,7 @@ export const Data = [
 
 const Wall = () => {
   return (
-    <div className="flex items-center flex-col gap-20">
+    <div className="flex items-center flex-col gap-20 mt-10">
       {Data.map((item, index) => (
         <WallCard
           key={index}
@@ -25,6 +25,7 @@ const Wall = () => {
           id={item.id}
           releaseYear={item.releaseYear}
           poster={item.poster}
+          variant="wall"
         />
       ))}
     </div>
