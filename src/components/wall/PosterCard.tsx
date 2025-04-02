@@ -56,6 +56,7 @@ const PosterCard = ({
         <CardTitle className="text-4xl">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex justify-between">
+        
         <div className="">
           <img src={poster} alt="pulp fiction" width={500} height={700} />
         </div>
@@ -64,21 +65,7 @@ const PosterCard = ({
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-start gap-10">
-        <div className="flex justify-between w-full">
-          <div className="flex gap-10 items-center">
-            <Button variant={"green"} className="cursor-pointer">
-              <ChevronUp />
-            </Button>
-            <p className="text-red-500">-48</p>
-
-            <Button variant={"destructive"} className="cursor-pointer">
-              <ChevronDown />
-            </Button>
-          </div>
-        </div>
-        <div className="flex justify-start w-[500px]">
-          <CommentsForm />
-        </div>
+        
       </CardFooter>
     </Card>
   );

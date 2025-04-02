@@ -1,3 +1,7 @@
+import CommentsForm from "./CommentsForm";
+import Comment from "./Comment";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Button } from "../ui/button";
 const CommentsList = () => {
   const Comments = [
     {
@@ -64,12 +68,30 @@ const CommentsList = () => {
 
   return (
     <div className="w-[600px]">
-      <h1 className="text-3xl font-semibold mb-6">Comments</h1>
-      <div className="flex flex-col gap-3">
-        {Comments.map((comment, index) => (
-          <div key={index}>
-            <h1>{comment.text}</h1>
+
+      <div className="flex justify-between w-full">
+        <div>
+          <h1 className="text-3xl font-semibold mb-6">Comments</h1>
+        </div>
+        <div className="flex justify-between w-full">
+          <div className="flex gap-10 items-center">
+            <Button variant={"green"} className="cursor-pointer">
+              <ChevronUp />
+            </Button>
+            <p className="text-red-500">-48</p>
+
+            <Button variant={"destructive"} className="cursor-pointer">
+              <ChevronDown />
+            </Button>
           </div>
+        </div>
+      </div>
+      <div className="flex justify-start w-[500px] w-full mb-6">
+        <CommentsForm />
+      </div>
+      <div className="flex flex-col gap-3 h-[600px] overflow-y-scroll">
+        {Comments.map((comment, index) => (
+          <Comment key={index} id={comment.id} likes={comment.likes} postDate={comment.postDate} text={comment.text} />
         ))}
       </div>
     </div>
