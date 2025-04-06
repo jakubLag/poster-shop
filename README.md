@@ -16,9 +16,12 @@
 
 ## Struktura plików
 
+## 📁 Struktura projektu
+
+```bash
 📦 project-root/
-├── 📁 public/
-│   ├── 📁 posters/
+├── public/
+│   ├── posters/
 │   │   ├── inception.jpg
 │   │   └── pulpfiction.jpg
 │   ├── data.js
@@ -27,29 +30,29 @@
 │   ├── next.svg
 │   ├── vercel.svg
 │   └── window.svg
-├── 📁 src/
-│   ├── 📁 app/
-│   │   ├── 📁 wall/
-│   │   │   ├── 📁 [slug]/
+├── src/
+│   ├── app/
+│   │   ├── wall/
+│   │   │   ├── [slug]/
 │   │   │   │   └── page.tsx
 │   │   │   └── page.tsx
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
-│   ├── 📁 components/
-│   │   ├── 📁 layout/
+│   ├── components/
+│   │   ├── layout/
 │   │   │   ├── Navbar.tsx
 │   │   │   └── NavbarListElement.tsx
-│   │   └── 📁 wall/
+│   │   └── wall/
 │   │       ├── Comment.tsx
 │   │       ├── CommentsForm.tsx
 │   │       ├── CommentsList.tsx
 │   │       └── PosterCard.tsx
-│   ├── 📁 ui/
+│   ├── ui/
 │   │   ├── button.tsx
 │   │   ├── card.tsx
 │   │   └── input.tsx
-│   ├── 📁 lib/
+│   ├── lib/
 │   │   └── utils.ts
 │   └── theme-provider.tsx
 ├── .gitignore
@@ -60,6 +63,7 @@
 ├── postcss.config.mjs
 ├── README.md
 └── tsconfig.json
+```
 
 
 ## 🚀 Demo
