@@ -66,9 +66,7 @@
 ```
 
 
-## 🚀 Demo
 
-_(Dodaj link do działającej wersji aplikacji lub zrzuty ekranu jeśli są dostępne)_
 
 ## ✨ Funkcje
 
