@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PosterVote 🎬🗳️
 
-## Getting Started
+**PosterVote** to interaktywna aplikacja webowa, która pozwala użytkownikom głosować na najlepsze plakaty filmowe. Użytkownicy mogą oddawać głosy "w górę" lub "w dół" na plakaty, a także przejść do dedykowanej zakładki plakatu, gdzie dostępne są szczegóły filmu, możliwość komentowania oraz lajkowania komentarzy.
 
-First, run the development server:
+## 📋 Spis treści
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Demo](#demo)
+- [Funkcje](#funkcje)
+- [Technologie](#technologie)
+- [Instalacja](#instalacja)
+- [Użycie](#użycie)
+- [Konfiguracja](#konfiguracja)
+- [Przykłady](#przykłady)
+- [Wkład](#wkład)
+- [Licencja](#licencja)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+_(Dodaj link do działającej wersji aplikacji lub zrzuty ekranu jeśli są dostępne)_
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Funkcje
 
-## Learn More
+- Przeglądanie plakatów filmowych
+- Głosowanie na plakaty (głos w górę / w dół)
+- Strona szczegółowa dla każdego plakatu z:
+  - Informacjami o filmie
+  - Sekcją komentarzy
+  - Możliwością lajkowania komentarzy
+- Stylowy interfejs oparty o Tailwind CSS i ShadCN UI
+- Ikony z biblioteki Lucide React
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Technologie
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Projekt został zbudowany przy użyciu następujących technologii:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/) – framework Reacta
+- [Tailwind CSS](https://tailwindcss.com/) – narzędzie do stylowania
+- [ShadCN UI](https://ui.shadcn.dev/) – komponenty UI
+- [Lucide React](https://lucide.dev/) – nowoczesne ikony SVG
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
