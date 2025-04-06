@@ -14,6 +14,54 @@
 - [Wkład](#wkład)
 - [Licencja](#licencja)
 
+## Struktura plików
+
+📦 project-root/
+├── 📁 public/
+│   ├── 📁 posters/
+│   │   ├── inception.jpg
+│   │   └── pulpfiction.jpg
+│   ├── data.js
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── 📁 src/
+│   ├── 📁 app/
+│   │   ├── 📁 wall/
+│   │   │   ├── 📁 [slug]/
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── 📁 components/
+│   │   ├── 📁 layout/
+│   │   │   ├── Navbar.tsx
+│   │   │   └── NavbarListElement.tsx
+│   │   └── 📁 wall/
+│   │       ├── Comment.tsx
+│   │       ├── CommentsForm.tsx
+│   │       ├── CommentsList.tsx
+│   │       └── PosterCard.tsx
+│   ├── 📁 ui/
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   └── input.tsx
+│   ├── 📁 lib/
+│   │   └── utils.ts
+│   └── theme-provider.tsx
+├── .gitignore
+├── components.json
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
+
+
 ## 🚀 Demo
 
 _(Dodaj link do działającej wersji aplikacji lub zrzuty ekranu jeśli są dostępne)_
