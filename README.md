@@ -85,6 +85,6 @@ Projekt został zbudowany przy użyciu następujących technologii:
 
 - [Next.js](https://nextjs.org/) – framework Reacta
 - [Tailwind CSS](https://tailwindcss.com/) – narzędzie do stylowania
-- [ShadCN UI]([https://ui.shadcn.dev/](https://ui.shadcn.com/)) – komponenty UI
+- [ShadCN UI](https://ui.shadcn.dev/) – komponenty UI
 - [Lucide React](https://lucide.dev/) – nowoczesne ikony SVG
 
