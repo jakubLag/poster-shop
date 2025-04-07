@@ -1,9 +1,32 @@
-import { Data } from "../page";
+import { db } from "@/firebase/firebaseConfig";
 import PosterCard from "@/components/wall/PosterCard";
-export default function Page({ params }: { params: { slug: string } }) {
+import { ref, get } from "firebase/database";
+
+// Typ filmu
+type Movie = {
+  id: number;
+  title: string;
+  releaseYear: number;
+  poster: string;
+  director: string;
+  genre: string;
+  rating: number
+};
+
+type PageProps = {
+  params: { slug: string };
+};
+
+export default async function Page({ params }: PageProps) {
   const { slug } = params;
 
-  const poster = Data.find((item) => item.id.toString() === slug);
+  const snapshot = await get(ref(db, "movies"));
+  let poster: Movie | undefined;
+
+  if (snapshot.exists()) {
+    const data = Object.values(snapshot.val()) as Movie[];
+    poster = data.find((item) => item.id.toString() === slug);
+  }
 
   if (!poster) {
     return <div>Not Found</div>;
@@ -16,6 +39,9 @@ export default function Page({ params }: { params: { slug: string } }) {
         releaseYear={poster.releaseYear}
         title={poster.title}
         poster={poster.poster}
+        director={poster.director}
+        genre={poster.genre}
+        rating={poster.rating}
         variant="details"
       />
     </div>
