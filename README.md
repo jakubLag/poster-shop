@@ -88,3 +88,8 @@ Projekt został zbudowany przy użyciu następujących technologii:
 - [ShadCN UI](https://ui.shadcn.com/) – komponenty UI
 - [Lucide React](https://lucide.dev/) – nowoczesne ikony SVG
 
+## Plany na rozbudowę
+- System autoryzacji
+- Logowanie i rejestracja użytkowników
+- Możliwość zakupu plakatów (koszyk)
+
