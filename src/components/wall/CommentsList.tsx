@@ -68,30 +68,32 @@ const CommentsList = () => {
 
   return (
     <div className="w-[600px]">
-
-      <div className="flex justify-between w-full">
-        <div>
-          <h1 className="text-3xl font-semibold mb-6">Comments</h1>
-        </div>
-        <div className="flex justify-between w-full">
-          <div className="flex gap-10 items-center">
-            <Button variant={"green"} className="cursor-pointer">
-              <ChevronUp />
-            </Button>
-            <p className="text-red-500">-48</p>
-
-            <Button variant={"destructive"} className="cursor-pointer">
-              <ChevronDown />
-            </Button>
-          </div>
+      <div className="flex justify-between items-center mb-6 px-4 py-2">
+        <h1 className="text-3xl font-semibold">Comments</h1>
+        <div className="flex gap-4 items-center">
+          <Button variant={"green"} className="cursor-pointer">
+            <ChevronUp />
+          </Button>
+          <p className="text-red-500">-48</p>
+          <Button variant={"destructive"} className="cursor-pointer">
+            <ChevronDown />
+          </Button>
         </div>
       </div>
-      <div className="flex justify-start w-[500px] w-full mb-6">
-        <CommentsForm />
+
+      <div className="flex justify-center w-full mb-6">
+        <CommentsForm variant="details" />
       </div>
-      <div className="flex flex-col gap-3 h-[600px] overflow-y-scroll">
+
+      <div className="flex flex-col gap-3 h-[600px] overflow-y-scroll px-4">
         {Comments.map((comment, index) => (
-          <Comment key={index} id={comment.id} likes={comment.likes} postDate={comment.postDate} text={comment.text} />
+          <Comment
+            key={index}
+            id={comment.id}
+            likes={comment.likes}
+            postDate={comment.postDate}
+            text={comment.text}
+          />
         ))}
       </div>
     </div>

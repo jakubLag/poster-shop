@@ -48,7 +48,7 @@ const PosterCard = ({
           <p className="text-base">More</p> <ChevronRight size={16} />
         </div>
       </CardFooter>
-      <CommentsForm />
+      <CommentsForm variant="wall"/>
     </Card>
   ) : (
     <Card className="w-[1200px] px-5">

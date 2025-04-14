@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="flex gap-25">
         <NavbarListElement text="Posters" />
         <NavbarListElement text="Votes" />
-        <NavbarListElement text="Top #10" />
+        <NavbarListElement text="userIcon" />
       </div>
     </div>
   );
