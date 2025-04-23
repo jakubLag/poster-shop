@@ -18,7 +18,7 @@ type PageProps = {
 };
 
 export default async function Page({ params }: PageProps) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const snapshot = await get(ref(db, "movies"));
   let poster: Movie | undefined;
