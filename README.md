@@ -14,9 +14,59 @@
 - [Wkład](#wkład)
 - [Licencja](#licencja)
 
-## 🚀 Demo
+## Struktura plików
 
-_(Dodaj link do działającej wersji aplikacji lub zrzuty ekranu jeśli są dostępne)_
+## 📁 Struktura projektu
+
+```bash
+📦 project-root/
+├── public/
+│   ├── posters/
+│   │   ├── inception.jpg
+│   │   └── pulpfiction.jpg
+│   ├── data.js
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src/
+│   ├── app/
+│   │   ├── wall/
+│   │   │   ├── [slug]/
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.tsx
+│   │   │   └── NavbarListElement.tsx
+│   │   └── wall/
+│   │       ├── Comment.tsx
+│   │       ├── CommentsForm.tsx
+│   │       ├── CommentsList.tsx
+│   │       └── PosterCard.tsx
+│   ├── ui/
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   └── input.tsx
+│   ├── lib/
+│   │   └── utils.ts
+│   └── theme-provider.tsx
+├── .gitignore
+├── components.json
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
+```
+
+
+
 
 ## ✨ Funkcje
 
@@ -35,6 +85,11 @@ Projekt został zbudowany przy użyciu następujących technologii:
 
 - [Next.js](https://nextjs.org/) – framework Reacta
 - [Tailwind CSS](https://tailwindcss.com/) – narzędzie do stylowania
-- [ShadCN UI](https://ui.shadcn.dev/) – komponenty UI
+- [ShadCN UI](https://ui.shadcn.com/) – komponenty UI
 - [Lucide React](https://lucide.dev/) – nowoczesne ikony SVG
+
+## Plany na rozbudowę
+- System autoryzacji
+- Logowanie i rejestracja użytkowników
+- Możliwość zakupu plakatów (koszyk)
 

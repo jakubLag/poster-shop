@@ -7,7 +7,6 @@ interface CommentProps {
     text: string;
     postDate: string;
     likes: number;
-
 }
 
 const Comment = ({ id, text, postDate, likes }: CommentProps) => {
