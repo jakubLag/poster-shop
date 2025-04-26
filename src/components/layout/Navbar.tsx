@@ -1,5 +1,6 @@
 import NavbarListElement from "./NavbarListElement";
-
+import { ShoppingBasket } from "lucide-react";
+import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="p-5 pr-30 flex justify-between items-center">
@@ -9,7 +10,7 @@ const Navbar = () => {
       <div className="flex gap-25">
         <NavbarListElement text="Posters" />
         <NavbarListElement text="Votes" />
-        <NavbarListElement text="userIcon" />
+        <Link href="/cart"><ShoppingBasket color="#f6339a" className="cursor-pointer"/></Link>
       </div>
     </div>
   );
