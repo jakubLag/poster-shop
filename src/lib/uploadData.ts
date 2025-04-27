@@ -5,22 +5,34 @@ import { db } from "@/firebase/firebaseConfig";
 export const uploadData = () => {
   const Data = [
     {
-      id: 0,
-      title: "Pulp Fiction",
-      releaseYear: 1994,
-      poster: "/posters/pulpFiction.jpg",
-      director: "Quentin Tarantino",
-      genre: "Crime",
-      rating: 20
+      id: 2,
+      title: "Harry Potter and The Philosopher's Stone",
+      releaseYear: 1997,
+      poster: "/posters/harrypotter.jpg",
+      director: "Chris Columbus",
+      genre: "Fantasy",
+      rating: 232,
+      price: 10.99
     },
     {
-      id: 1,
+      id: 3,
       title: "Inception",
       releaseYear: 2010,
       poster: "/posters/inception.jpg",
       director: "Christopher Nolan",
       genre: "Science Fiction",
-      rating: -5
+      rating: 11,
+      price: 10.99
+    },
+    {
+      id: 4,
+      title: "Pulp Fiction",
+      releaseYear: 1995,
+      poster: "/posters/pulpFiction.jpg",
+      director: "Quentin Tarantino",
+      genre: "Comedy",
+      rating: 1123,
+      price: 10.99
     },
   ];
 

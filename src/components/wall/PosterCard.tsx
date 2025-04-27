@@ -22,7 +22,7 @@ import { db } from "@/firebase/firebaseConfig";
 import CommentsForm from "./CommentsForm";
 import CommentsList from "./CommentsList";
 
-type WallCardProps = {
+export type WallCardProps = {
   id: number;
   title: string;
   releaseYear: number;
@@ -30,6 +30,7 @@ type WallCardProps = {
   director: string;
   genre: string;
   rating: number;
+  price: number;
   variant: "wall" | "details";
 };
 
@@ -41,6 +42,7 @@ const PosterCard = ({
   director,
   genre,
   rating,
+  price,
   variant,
 }: WallCardProps) => {
   const router = useRouter();
@@ -66,8 +68,10 @@ const PosterCard = ({
       setCurrentRating(newRating);
       setHasVoted(true);
 
-      // Zapisz głos lokalnie
-      const votedMovies = JSON.parse(localStorage.getItem("votedMovies") || "{}");
+      
+      const votedMovies = JSON.parse(
+        localStorage.getItem("votedMovies") || "{}"
+      );
       votedMovies[id] = true;
       localStorage.setItem("votedMovies", JSON.stringify(votedMovies));
     } catch (error) {
@@ -86,7 +90,7 @@ const PosterCard = ({
         </div>
       </CardContent>
       <CardFooter className="flex flex-col gap-7">
-        <div className="w-full flex gap-10 justify-between">
+        <div className="w-[600px] flex gap-10 justify-between ">
           <div className="flex gap-10 items-center">
             <Button
               variant={"green"}
@@ -119,9 +123,22 @@ const PosterCard = ({
             <p className="text-base">More</p> <ChevronRight size={16} />
           </div>
         </div>
-        <CommentsForm variant="wall"/>
+        <CommentsForm variant="wall" movieId={id}/>
         <div>
-          <CommentsList variant="wall" movieId={id} />
+          <CommentsList
+            variant="wall"
+            poster={{
+              id,
+              title,
+              releaseYear,
+              poster,
+              director,
+              genre,
+              rating,
+              price,
+              variant,
+            }}
+          />
         </div>
       </CardFooter>
     </Card>
@@ -146,14 +163,22 @@ const PosterCard = ({
           <img src={poster} alt={title} width={500} height={700} />
         </div>
         <div>
-          <CommentsList variant="details" movieId={id} />
+          <CommentsList
+            variant="details"
+            poster={{
+              id,
+              title,
+              releaseYear,
+              poster,
+              director,
+              genre,
+              rating,
+              price,
+              variant,
+            }}
+          />
         </div>
       </CardContent>
-      <CardFooter>
-        <Button className="w-[500px] cursor-pointer">
-          Add to cart <ShoppingCart />
-        </Button>
-      </CardFooter>
     </Card>
   );
 };

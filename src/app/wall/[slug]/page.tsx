@@ -11,6 +11,7 @@ type Movie = {
   director: string;
   genre: string;
   rating: number
+  price: number
 };
 
 type PageProps = {
@@ -42,6 +43,7 @@ export default async function Page({ params }: PageProps) {
         director={poster.director}
         genre={poster.genre}
         rating={poster.rating}
+        price={poster.price}
         variant="details"
       />
     </div>

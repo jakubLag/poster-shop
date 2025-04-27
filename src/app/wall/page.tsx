@@ -12,6 +12,7 @@ type Movie = {
   poster: string;
   director: string;
   genre: string;
+  price: number;
   rating: number;
 };
 
@@ -45,6 +46,7 @@ const Wall = () => {
           director={item.director}
           genre={item.genre}
           rating={item.rating}
+          price={item.price}
           variant="wall"
         />
       ))}
