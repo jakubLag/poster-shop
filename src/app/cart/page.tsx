@@ -17,15 +17,17 @@ const Cart = () => {
 
           <div className="flex items-center gap-10">
             <h2 className="font-semibold">Suma: {totalSum}zł</h2>
-            <Button className="cursor-pointer">
+            <Button className="cursor-pointer" disabled={cart.length === 0}>
               Checkout
               <ArrowRight />
             </Button>
           </div>
         </div>
-        {cart.map((item, index) => (
-          <CartItem key={index} poster={item} />
-        ))}
+        {cart.length === 0 ? (
+          <h1 className="text-4xl font-semibold">Cart is empty...</h1>
+        ) : (
+          cart.map((item, index) => <CartItem key={index} poster={item} />)
+        )}
       </Card>
     </div>
   );
